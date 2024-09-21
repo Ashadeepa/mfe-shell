@@ -1,0 +1,8 @@
+.reactContainer {
+    border: 2px dashed #bb1d79;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    color: rgb(130, 150, 130);
+    display: inline-block;
+  }
