@@ -6,16 +6,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#" id="home-link">Home</a>
+        <a class="nav-link" routerLink="/home" id="home-link">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/micro-app1" id="mfe1-link">Angular MFE 1</a>
+        <a class="nav-link" routerLink="/micro-app1" id="mfe1-link">Angular MFE 1</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/react-app" id="react-link">React MFE</a>
+        <a class="nav-link" routerLink="/react-app" id="react-link">React MFE</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/micro-app2" id="mfe2-link">Angular MFE 2</a>
+        <a class="nav-link" routerLink="/micro-app2" id="mfe2-link">Angular MFE 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/signal-store" id="signal-store">Signal Store Example</a>
       </li>
     </ul>
   </div>
@@ -24,4 +27,13 @@
 <!-- <button type="button" style="margin: 1rem;" (click)="reactApp()" class="btn btn-success">React MFE App</button> -->
 
 
-<router-outlet></router-outlet>
+
+<div class="dual-mfe-apps-container">
+  <div class="app1">
+    <!-- <router-outlet name="left"></router-outlet> -->
+    <router-outlet></router-outlet>
+  </div>
+  <div class="app2">
+    <router-outlet name="right"></router-outlet>
+  </div>
+</div>

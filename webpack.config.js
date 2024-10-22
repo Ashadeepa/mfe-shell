@@ -30,12 +30,19 @@ module.exports = {
 
         // For remotes (please adjust)
         name: "shellApp",
+        filename: "remoteEntry.js",
         remotes: {
+          shellApp: "shellApp@http://localhost:4200/remoteEntry.js",
+
           mfe1: "microApp@http://localhost:4300/remoteEntry.js",
-          mfe2: "microApp@http://localhost:4400/remoteEntry.js",
+          mfe2: "microApp2@http://localhost:4400/remoteEntry.js",
           reactApp: 'reactApp@http://localhost:3000/remoteEntry.js',
         },
 
+        exposes: {
+            './Component': './src/app/app.component.ts',
+            // './Store': './src/app/signal-store-example/todo/todo.store.ts',
+        },
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },

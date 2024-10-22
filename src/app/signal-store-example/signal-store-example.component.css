@@ -1,0 +1,42 @@
+.signal-store-dual-app-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.app1-container,
+.app2-container {
+    width: 50%;
+}
+
+.todos {
+    width: 20rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.todos-list-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    height: 21rem;
+    overflow-y: auto;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.delete-todo {
+    cursor: pointer;
+}
+
+.todo-item .completed {
+    text-decoration: line-through;
+}

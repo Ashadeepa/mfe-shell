@@ -1,7 +1,7 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Component, OnInit, ElementRef } from '@angular/core';
 import React  from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 @Component({
   selector: 'app-react-app',
@@ -23,10 +23,9 @@ export class ReactAppComponent implements OnInit {
     });
 
     // Render the React component inside the Angular template's react-root div
-    ReactDOM.render(
-      React.createElement(MyReactComponent),
-      this.elementRef.nativeElement.querySelector('#react-root')
-    );
+    const root = createRoot(this.elementRef.nativeElement.querySelector('#react-root'));
+    root.render(React.createElement(MyReactComponent));
+    console.log('ReactAppComponent created');
   }
 
 }
